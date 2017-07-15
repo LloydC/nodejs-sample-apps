@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express();
 
 app.set('views', './src/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
 	fs.readFile('./countries.json', function (error, data) {

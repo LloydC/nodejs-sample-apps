@@ -1,19 +1,11 @@
 var express = require('express');
-var fs = require('fs');
-
 var app = express();
 
 app.set('views', './src/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.get('/', function (req, res) {
-	fs.readFile('./data.txt', function (error, data) {
-		if (error) {
-			console.log(error);
-		}
-
-		res.render('index', {stuff: data});
-	});
+	res.render('index', { z: 3 });
 });
 
 var server = app.listen(3000, function () {

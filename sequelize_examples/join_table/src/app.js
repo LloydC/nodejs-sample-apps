@@ -30,7 +30,7 @@ var app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.set('views', './src/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.get('/', function (request, response) {
 	Promise.all([

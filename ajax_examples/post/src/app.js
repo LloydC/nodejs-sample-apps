@@ -4,7 +4,7 @@ var fs = require('fs');
 
 var app = express();
 app.set('views', './src/views');
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 app.get('/', function (request, response) {
 	response.render('index');

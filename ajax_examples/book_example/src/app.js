@@ -9,7 +9,7 @@ app.use(express.static('public/javascripts'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 app.set('views', 'src/views');
 
 app.get('/', function (req, res) {
