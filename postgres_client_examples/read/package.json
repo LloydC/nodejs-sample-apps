@@ -3,6 +3,6 @@
   "version": "0.0.0",
   "private": true,
   "dependencies": {
-    "pg": "^4.4.3"
+    "pg": "^7.0.2"
   }
 }

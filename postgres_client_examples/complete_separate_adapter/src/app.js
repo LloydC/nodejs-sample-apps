@@ -1,5 +1,5 @@
-var query = require('./query_db');
+const query = require('./query_db');
 
-query('select * from hats', function(error, result) {
+query('select * from hats', (error, result)=> {
 	console.log(result.rows);
 });
