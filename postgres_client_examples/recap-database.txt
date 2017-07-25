@@ -1,0 +1,47 @@
+/// ONE TO ONE RELATIONSHIPS
+
+Users Table
+
+id primary key
+fullname text
+age integer
+
+Passport Table
+
+passport_id primary key
+passport number text
+users_id foreign key references users table
+
+
+/// ONE TO MANY RELATIONSHIPS
+
+Users Table
+
+id primary key
+fullname text
+age integer
+
+Items Table
+
+items_id primary key
+name text
+users_id foreign key
+
+/// MANY TO MANY RELATIONSHIPS
+
+Doctors Table
+
+doctor_id primary key
+doctor_name text
+
+"Join Table" Appointment Table
+
+Appointment_id primary key
+doctor_id foreign key references doctors
+patient_id foreign key references patients
+date date/timestamp
+
+Patients Table
+
+patient_id primary key
+patient_name text
