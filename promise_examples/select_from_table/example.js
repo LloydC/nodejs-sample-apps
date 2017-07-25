@@ -2,7 +2,7 @@ var pg = require('pg');
 
 var selectStuffFromTable = function(tableName) {
 	return new Promise(function(resolve, reject) {
-		pg.connect("postgres://jon@localhost/class_example", function(err, client, done) {
+		pg.connect("postgres://lloydchambrier@localhost/class_example_1", function(err, client, done) {
 			if(err) {
 				reject(err);
 				done();
@@ -34,7 +34,6 @@ selectStuffFromTable("hats").then(function(rows) {
 	console.log(error);
 });
 
-
 // reject handler called (because 'flats' doesn't exist
 selectStuffFromTable("flats").then(function(rows) {
 	console.log("FLATS :D :D ");
@@ -44,3 +43,4 @@ selectStuffFromTable("flats").then(function(rows) {
 	console.log("oh no an error :c");
 	console.log(error);
 });
+console.log('//////////HERE COMES THE ASYNC PROOF/////////')

@@ -1,7 +1,7 @@
 var pg = require('pg');
 
 var selectStuffFromTable = new Promise(function (resolve, reject) {
-	pg.connect("postgres://jon@localhost/class_example", function (err, client, done) {
+	pg.connect("postgres://lloydchambrier@localhost/class_example_1", function (err, client, done) {
 		if (err) {
 			reject(err);
 			done();
