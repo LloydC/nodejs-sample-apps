@@ -19,7 +19,7 @@ html
 		else
 			form(action='/login' method='post')
 				label email
-				input#email(name='email' required value=#{old})
+				input#email(name='email' required)
 				label password
 				input#password(name='password' required)
 				input(type='submit' value='login' id='submit')

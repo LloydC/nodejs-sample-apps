@@ -3,13 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var session = require('express-session');
 
-var sequelize = new Sequelize('class_example', 'jon', null, {
-	host: 'localhost',
-	dialect: 'postgres',
-	define: {
-		timestamps: false
-	}
-});
+var sequelize = new Sequelize('postgres://lloydchambrier@localhost/class_example_3');
 
 var User = sequelize.define('user', {
 	name: Sequelize.STRING,
@@ -84,9 +78,9 @@ app.get('/logout', function (request, response) {
 
 sequelize.sync({force: true}).then(function () {
 	User.create({
-		name: "stabbins",
-		email: "yes@no",
-		password: "not_password"
+		name: "lloyd",
+		email: "lloyd@test.com",
+		password: "supersafe_password"
 	}).then(function () {
 		var server = app.listen(3000, function () {
 			console.log('Example app listening on port: ' + server.address().port);
